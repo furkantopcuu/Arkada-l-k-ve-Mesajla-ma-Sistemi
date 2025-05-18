@@ -1,0 +1,69 @@
+{
+  "id": "4ac82918-e53d-4c12-942f-3b654eb9c6a8",
+  "name": "SosyalPlatform-Lokal",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "userId",
+      "value": "7f2d5a03-c895-41cf-9122-c24f841a6c5d",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "friendId",
+      "value": "e3a82fa7-14c8-48f5-bc3e-6d1ed7fb7e32",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "receiverId",
+      "value": "e3a82fa7-14c8-48f5-bc3e-6d1ed7fb7e32",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "messageId",
+      "value": "8f3ec9d1-42e8-4ef9-a371-c42a92d5c787",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "conversationId",
+      "value": "5ab97531-1562-4894-ab21-ef7b1a48762e",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "testUserEmail",
+      "value": "ahmet@example.com",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "testUserPassword",
+      "value": "Sifre123!",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "friendEmail",
+      "value": "furkan@example.com",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "query",
+      "value": "haber",
+      "type": "default",
+      "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2024-05-15T16:42:23.000Z",
+  "_postman_exported_using": "Postman/10.15.8"
+} 

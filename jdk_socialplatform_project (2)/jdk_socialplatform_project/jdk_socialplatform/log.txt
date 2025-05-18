@@ -1,0 +1,52 @@
+[2025-05-15 17:03:43] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-15 17:03:43
+[2025-05-15 17:03:43] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı
+[2025-05-15 17:06:51] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-15 17:06:51
+[2025-05-15 17:06:51] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı
+[2025-05-15 17:09:01] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-15 17:09:01
+[2025-05-15 17:09:01] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı
+[2025-05-15 17:10:40] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-15 17:10:40
+[2025-05-15 17:10:40] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı
+[2025-05-15 17:12:11] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-15 17:12:11
+[2025-05-15 17:12:11] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı
+[2025-05-15 17:16:15] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-15 17:16:15
+[2025-05-15 17:16:15] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı
+[2025-05-15 17:19:01] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-15 17:19:01
+[2025-05-15 17:19:01] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı
+[2025-05-15 17:24:42] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-15 17:24:42
+[2025-05-15 17:24:42] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı
+[2025-05-15 17:25:02] [WARNING] Kullanıcı bulunamadı (email): test.gmail.com
+[2025-05-15 17:25:27] [INFO] Yeni kullanıcı oluşturuldu: test
+[2025-05-15 17:25:43] [WARNING] Kullanıcı bulunamadı (email): test.gmail.com
+[2025-05-15 17:26:01] [INFO] Yeni kullanıcı oluşturuldu: test
+[2025-05-15 17:26:10] [WARNING] Kullanıcı bulunamadı (email): test1.gmail.com
+[2025-05-15 17:26:14] [WARNING] Kullanıcı bulunamadı (email): test1.gmail.com
+[2025-05-15 17:26:18] [WARNING] Kullanıcı bulunamadı (email): test1.gmail.com
+[2025-05-15 17:26:23] [WARNING] Kullanıcı bulunamadı (email): test1.gmail.com
+[2025-05-15 17:28:05] [INFO] Yeni kullanıcı oluşturuldu: testsude
+[2025-05-15 17:28:16] [WARNING] Kullanıcı bulunamadı (email): testsude.gmail.com
+[2025-05-15 17:29:31] [WARNING] Kullanıcı testsude arkadaş olmayan test kullanıcısına mesaj göndermeye çalıştı
+[2025-05-15 17:29:31] [WARNING] Mesaj gönderme hatası: Arkadaş olmayan kullanıcıya mesaj gönderilemez
+[2025-05-15 17:37:22] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-15 17:37:22
+[2025-05-15 17:37:22] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı
+[2025-05-15 17:37:39] [WARNING] Kullanıcı bulunamadı (email): testsude@gmail.com
+[2025-05-15 17:38:00] [INFO] Yeni kullanıcı oluşturuldu: syde
+[2025-05-15 17:38:22] [WARNING] Kullanıcı syde arkadaş olmayan syde kullanıcısına mesaj göndermeye çalıştı
+[2025-05-15 17:38:22] [WARNING] Mesaj gönderme hatası: Arkadaş olmayan kullanıcıya mesaj gönderilemez
+[2025-05-15 17:40:51] [WARNING] Kullanıcı syde arkadaş olmayan syde kullanıcısına mesaj göndermeye çalıştı
+[2025-05-15 17:40:51] [WARNING] Mesaj gönderme hatası: Arkadaş olmayan kullanıcıya mesaj gönderilemez
+[2025-05-15 17:40:54] [WARNING] Kullanıcı syde arkadaş olmayan syde kullanıcısına mesaj göndermeye çalıştı
+[2025-05-15 17:40:54] [WARNING] Mesaj gönderme hatası: Arkadaş olmayan kullanıcıya mesaj gönderilemez
+[2025-05-15 17:44:11] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-15 17:44:11
+[2025-05-15 17:44:11] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı
+[2025-05-15 17:44:35] [INFO] Yeni kullanıcı oluşturuldu: sude
+[2025-05-15 17:45:09] [INFO] Yeni kullanıcı oluşturuldu: test
+[2025-05-15 17:45:19] [ERROR] E-posta gönderilirken hata oluştu: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 3025; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused
+[2025-05-15 17:45:19] [INFO] Arkadaşlık eklendi: sude -> test
+[2025-05-15 17:45:31] [ERROR] Mesaj bildirimi gönderilirken hata oluştu: Mail server connection failed. Failed messages: org.eclipse.angus.mail.util.MailConnectException: Couldn't connect to host, port: localhost, 3025; timeout -1;
+  nested exception is:
+	java.net.ConnectException: Connection refused
+[2025-05-15 17:45:31] [INFO] Mesaj gönderildi: sude -> test, içerik: selam
+[2025-05-18 17:55:41] [INFO] Mesaj istatistiği oluşturma görevi çalıştırıldı: 2025-05-18 17:55:41
+[2025-05-18 17:55:41] [INFO] Mesaj istatistiği oluşturma görevi tamamlandı

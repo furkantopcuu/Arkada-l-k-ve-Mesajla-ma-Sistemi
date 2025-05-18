@@ -1,0 +1,568 @@
+{
+  "info": {
+    "_postman_id": "6ea9f328-1f43-49f4-b1f2-ac29a0d1c63a",
+    "name": "Sosyal Platform API",
+    "description": "Sosyal Platform uygulaması API testleri",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "8745219"
+  },
+  "item": [
+    {
+      "name": "Kullanıcı İşlemleri",
+      "description": "Kullanıcı kaydı, girişi ve profil yönetimi API'leri",
+      "item": [
+        {
+          "name": "Kullanıcı Oluşturma",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"username\": \"test_user\",\n    \"email\": \"test@example.com\",\n    \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users"
+              ]
+            },
+            "description": "Yeni kullanıcı oluşturma API'si"
+          },
+          "response": [
+            {
+              "name": "Başarılı Yanıt",
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n    \"id\": \"f47ac10b-58cc-4372-a567-0e02b2c3d479\",\n    \"username\": \"test_user\",\n    \"email\": \"test@example.com\"\n}",
+              "cookie": [],
+              "responseTime": 175
+            }
+          ]
+        },
+        {
+          "name": "Tüm Kullanıcıları Listeleme",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users"
+              ]
+            },
+            "description": "Sistem kullanıcılarını listeler"
+          },
+          "response": []
+        },
+        {
+          "name": "ID'ye Göre Kullanıcı Getirme",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/users/{{userId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "{{userId}}"
+              ]
+            },
+            "description": "Kullanıcı bilgilerini UUID ile getir"
+          },
+          "response": []
+        },
+        {
+          "name": "E-postaya Göre Kullanıcı Getirme",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/users/email/test@example.com",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "email",
+                "test@example.com"
+              ]
+            },
+            "description": "Kullanıcı bilgilerini e-posta ile getir"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Arkadaşlık İşlemleri",
+      "description": "Arkadaş ilişkilerini yönetme API'leri",
+      "item": [
+        {
+          "name": "Arkadaş Ekleme",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/users/{{userId}}/friends/{{friendId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "{{userId}}",
+                "friends",
+                "{{friendId}}"
+              ]
+            },
+            "description": "Arkadaşlık bağlantısı kurma"
+          },
+          "response": [
+            {
+              "name": "Başarılı",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/users/f47ac10b-58cc-4372-a567-0e02b2c3d479/friends/550e8400-e29b-41d4-a716-446655440000",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "users",
+                    "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+                    "friends",
+                    "550e8400-e29b-41d4-a716-446655440000"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "Text",
+              "header": [],
+              "cookie": [],
+              "responseTime": 124
+            }
+          ]
+        },
+        {
+          "name": "Arkadaş Silme",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/users/{{userId}}/friends/{{friendId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "{{userId}}",
+                "friends",
+                "{{friendId}}"
+              ]
+            },
+            "description": "Arkadaşlık ilişkisini sonlandırma"
+          },
+          "response": []
+        },
+        {
+          "name": "Arkadaşları Listeleme",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/users/{{userId}}/friends",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "users",
+                "{{userId}}",
+                "friends"
+              ]
+            },
+            "description": "Kullanıcının arkadaş listesini getir"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Mesaj İşlemleri",
+      "description": "Mesajlaşma sistemi API'leri",
+      "item": [
+        {
+          "name": "Mesaj Gönderme",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"senderId\": \"{{userId}}\",\n    \"receiverId\": \"{{receiverId}}\",\n    \"content\": \"Merhaba, nasılsın?\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/messages",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "messages"
+              ]
+            },
+            "description": "Kullanıcılar arası mesaj gönderimi"
+          },
+          "response": []
+        },
+        {
+          "name": "İki Kullanıcı Arasındaki Mesajları Listeleme",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/messages/between?user1Id={{userId}}&user2Id={{receiverId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "messages",
+                "between"
+              ],
+              "query": [
+                {
+                  "key": "user1Id",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "user2Id",
+                  "value": "{{receiverId}}"
+                }
+              ]
+            },
+            "description": "Mesaj geçmişi görüntüleme"
+          },
+          "response": []
+        },
+        {
+          "name": "Mesajı Okundu Olarak İşaretleme",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/messages/{{messageId}}/read",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "messages",
+                "{{messageId}}",
+                "read"
+              ]
+            },
+            "description": "Mesaj durumunu okundu olarak güncelle"
+          },
+          "response": []
+        },
+        {
+          "name": "Okunmamış Mesajları Listeleme",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/messages/unread?userId={{userId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "messages",
+                "unread"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                }
+              ]
+            },
+            "description": "Okunmamış mesajları getir"
+          },
+          "response": [
+            {
+              "name": "Başarılı",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:8080/api/messages/unread?userId=f47ac10b-58cc-4372-a567-0e02b2c3d479",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "8080",
+                  "path": [
+                    "api",
+                    "messages",
+                    "unread"
+                  ],
+                  "query": [
+                    {
+                      "key": "userId",
+                      "value": "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"id\": \"6ba7b810-9dad-11d1-80b4-00c04fd430c8\",\n        \"sender\": {\n            \"id\": \"550e8400-e29b-41d4-a716-446655440000\",\n            \"username\": \"other_user\",\n            \"email\": \"other@example.com\"\n        },\n        \"receiver\": {\n            \"id\": \"f47ac10b-58cc-4372-a567-0e02b2c3d479\",\n            \"username\": \"test_user\",\n            \"email\": \"test@example.com\"\n        },\n        \"content\": \"Merhaba, ben de iyiyim. Teşekkürler!\",\n        \"timestamp\": \"2023-05-15T15:10:23\",\n        \"read\": false\n    }\n]"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Konuşma İşlemleri",
+      "description": "Konuşma yönetimi API'leri",
+      "item": [
+        {
+          "name": "Kullanıcı Konuşmalarını Listeleme",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/conversations?userId={{userId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "conversations"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "{{userId}}"
+                }
+              ]
+            },
+            "description": "Kullanıcının tüm konuşmalarını getir"
+          },
+          "response": []
+        },
+        {
+          "name": "ID'ye Göre Konuşma Getirme",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/conversations/{{conversationId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "conversations",
+                "{{conversationId}}"
+              ]
+            },
+            "description": "Belirli bir konuşmayı getir"
+          },
+          "response": []
+        },
+        {
+          "name": "İki Kullanıcı Arasındaki Konuşmayı Getirme",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/conversations/users?user1Id={{userId}}&user2Id={{receiverId}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "conversations",
+                "users"
+              ],
+              "query": [
+                {
+                  "key": "user1Id",
+                  "value": "{{userId}}"
+                },
+                {
+                  "key": "user2Id",
+                  "value": "{{receiverId}}"
+                }
+              ]
+            },
+            "description": "İki kullanıcı arasındaki konuşmayı getir"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Dış API İşlemleri",
+      "description": "Harici servis entegrasyonları",
+      "item": [
+        {
+          "name": "Dış Veri Getirme",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:8080/api/external/data?query={{query}}",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "8080",
+              "path": [
+                "api",
+                "external",
+                "data"
+              ],
+              "query": [
+                {
+                  "key": "query",
+                  "value": "{{query}}"
+                }
+              ]
+            },
+            "description": "Dış API servisi"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Ön şartlar burada tanımlanabilir",
+          "pm.environment.get(\"userId\") || pm.environment.set(\"userId\", \"f47ac10b-58cc-4372-a567-0e02b2c3d479\");"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "// Test betikleri burada tanımlanabilir",
+          "pm.test(\"Durum kodu 2xx olmalıdır\", function() {",
+          "    pm.response.to.be.success;",
+          "});"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "userId",
+      "value": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+      "type": "string"
+    },
+    {
+      "key": "friendId",
+      "value": "550e8400-e29b-41d4-a716-446655440000",
+      "type": "string"
+    },
+    {
+      "key": "receiverId",
+      "value": "550e8400-e29b-41d4-a716-446655440000",
+      "type": "string"
+    },
+    {
+      "key": "messageId",
+      "value": "6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+      "type": "string"
+    },
+    {
+      "key": "conversationId",
+      "value": "d9e7a184-5d5b-11ea-a62a-0242ac130003",
+      "type": "string"
+    },
+    {
+      "key": "query",
+      "value": "search_query",
+      "type": "string"
+    }
+  ]
+} 
